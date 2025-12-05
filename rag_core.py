@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import os
 from typing import List
 
@@ -70,7 +71,8 @@ def add_pdf_to_vector_db(file_path: str, source_name: str):
     embeddings = embedder.encode(chunks).tolist()
 
     ids = [f"{source_name}_{i}" for i in range(len(chunks))]
-    metadatas = [{"source": source_name, "chunk_index": i} for i in range(len(chunks))]
+    metadatas = [{"source": source_name, "chunk_index": i}
+                 for i in range(len(chunks))]
 
     collection.add(
         ids=ids,
@@ -115,7 +117,6 @@ def retrieve_relevant_chunks(query: str, top_k: int = 4) -> List[str]:
 # -------------------------------------------
 # LLM CALL — GROQ
 # -------------------------------------------
-from dotenv import load_dotenv
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")

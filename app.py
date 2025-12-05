@@ -11,6 +11,8 @@ if "chat_history" not in st.session_state:
 # ----------------------------------------------------
 # Streamlit App
 # ----------------------------------------------------
+
+
 def main():
     st.set_page_config(page_title="Mini RAG Assistant", layout="wide")
     st.title("📚 Mini RAG-based AI Knowledge Assistant")
@@ -72,6 +74,7 @@ def main():
             st.markdown(f"**🧑 You:** {turn['q']}")
             st.markdown(f"**🤖 Assistant:** {turn['a']}")
             st.markdown("---")
+
 
 # ----------------------------------------------------
 # Run App
