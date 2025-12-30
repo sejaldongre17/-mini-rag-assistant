@@ -21,7 +21,9 @@ The system uses:
 - Button to **clear** the vector database
 
 ---
+ STREAMLIT LINK : https://sejal-mini-rag-assistant-system.streamlit.app/
 
+ 
 ## 🧱 Project Structure
 
 ```text
@@ -44,3 +46,4 @@ SentenceTransformers
 ChromaDB
 Groq LLM API
 Llama 3.1 8B Instant (llama-3.1-8b-instant)
+
